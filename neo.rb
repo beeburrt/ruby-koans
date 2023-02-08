@@ -380,7 +380,7 @@ ENDTEXT
 
     def indent(text)
       text = text.split(/\n/) if text.is_a?(String)
-      text.collect{|t| "  #{t}"}
+      text.collect { |t| "  #{t}" }
     end
 
     def find_interesting_lines(backtrace)
@@ -419,7 +419,7 @@ ENDTEXT
 
     attr_reader :name, :failure, :koan_count, :step_count, :koan_file
 
-    def initialize(name, koan_file=nil, koan_count=0, step_count=0)
+    def initialize(name, koan_file = nil, koan_count = 0, step_count = 0)
       @name = name
       @failure = nil
       @koan_count = koan_count
@@ -435,11 +435,9 @@ ENDTEXT
       @failure = failure
     end
 
-    def setup
-    end
+    def setup; end
 
-    def teardown
-    end
+    def teardown; end
 
     def meditate
       setup
